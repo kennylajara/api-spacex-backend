@@ -97,4 +97,4 @@ python bonus.py
 # follow the instructions
 ```
 
-Note: If something is not working, check the OS and Python version. I'd expect it to work on Windows, Linux and Mac with any Python version `>=3.6`, but has only been tested on `Ubuntu` `Python 3.10` so prefer this version whenever is possible on .
+Note: If something is not working, check the OS and Python version. I'd expect it to work on Windows, Linux and Mac with any Python version `>=3.6`, but has only been tested on `Ubuntu` with `Python 3.10`, so prefer this OS and version combo if possible.
