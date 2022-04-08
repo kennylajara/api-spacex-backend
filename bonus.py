@@ -46,9 +46,9 @@ def select_satellites(conn, time):
     satellites = []
     for row in rows:
         if row[1] is not None:
-            lon, lat = row[1].split(",")
-            lon, lat = float(lon), float(lat)
-            satellites.append((row[0], (lon, lat)))
+            lat, lon = row[1].split(",")
+            lat, lon = float(lat), float(lon)
+            satellites.append((row[0], (lat, lon)))
 
     return satellites
 
@@ -80,14 +80,14 @@ if __name__ == "__main__":
 
     # Ask for the point
     while(True):
-        point = input("Enter a point (lon,lat): ").strip('()').replace(" ", "")
+        point = input("Enter a point (lat,lon): ").strip('()').replace(" ", "")
         coords = point.split(",")
         # Validate the point format
         try:
             if len(coords) != 2:
                 raise ValueError
 
-            lon, lat = float(coords[0]), float(coords[1])
+            lat, lon = float(coords[0]), float(coords[1])
             if lon < -180 or lon > 180 or lat < -90 or lat > 90:
                 raise ValueError
             else:
@@ -97,5 +97,5 @@ if __name__ == "__main__":
 
 
     satellites = select_satellites(conn, time)
-    closest = find_closest_to_point(satellites, (lon, lat))
+    closest = find_closest_to_point(satellites, (lat, lon))
     print(f"The closest satellite is {closest[0]} at {closest[1]:.2f} km")
