@@ -9,7 +9,8 @@ And
 > No need to derive any fancy match for distances (...)
 
 ```
-Some practices like avoing hardcoding credentials or adding unit tests are ignored for the sake of simplicity.
+Some practices like avoing hardcoding credentials, modularity, or adding unit tests
+are ignored to keep it simple and easier to read.
 ```
 
 # The Problem:
@@ -97,4 +98,4 @@ python bonus.py
 # follow the instructions
 ```
 
-Note: If something is not working, check the OS and Python version. I'd expect it to work on Windows, Linux and Mac with any Python version `>=3.6`, but has only been tested on `Ubuntu` with `Python 3.10`, so prefer this OS and version combo if possible.
+Note: If something is not working, check the OS and Python version. I'd expect it to work on Windows, Linux and Mac with any Python version `>=3.6`, but it has been tested only on `Ubuntu 20.04` with `Python 3.10`, so prefer this OS and version combo if possible.
