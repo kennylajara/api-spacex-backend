@@ -53,6 +53,8 @@ This is the process I followed to complete this task:
 3. Afterward, I manually wrote the commands to create the table and the indexes.
 4. Finally, I configured the `docker-compose.yml` file to automatically import the `init.sql` file.
 
+**Note:** It would also have been possible to import the CSV file in a Python script using the method indicated on [this web page](https://www.geeksforgeeks.org/python-import-csv-into-postgresql/), but I preferred to do it this way because it is a simple method and does not require an additional execution of the script each time the container is started nor the creation of a volume to persist the data.
+
 # The Task (Part 3):
 
 Write a query to fetch the last known position of a satellite (by id), given a time T. Include this query in your README or somewhere in the project submission.
