@@ -1,9 +1,20 @@
 # Blue Onion Labs Take Home Test Completed
 
+This is the solution to the [Blue Onion Labs Take Home Test](https://github.com/BlueOnionLabs/api-spacex-backend). It has been solved in the easiest and faster way I could think and not necessarily as it would be done for production environment applications. At least, I think this is the spirit of the exercise after reading sentences such as the ones I quote below:
 
+> Don't hesitate to use any tools/tricks you know to load data quickly and easily!
+
+And
+
+> No need to derive any fancy match for distances (...)
+
+```
+Several good practices are ignored for the sake of simplicity.
+```
 
 # The Problem:
-We want to be achieve a few goals:
+
+We want to achieve a few goals:
   - To import the SpaceX Satellite data _as a time series_ into a database
   - To be able to query the data to determine the last known latitude/longitude of the satellite for a given time
 
@@ -13,8 +24,7 @@ Stand up your favorite kind of database (and ideally it would be in a form that 
 
 ## Solution:
 
-I have completed the task using postgres, to run it you can use `docker-compose` (as requested): `docker-compose up -d`
-
+I have completed the task using Postgres, to run it you can use `docker-compose` (as requested): `docker-compose up -d`
 
 # The Task (Part 2):
 
@@ -65,3 +75,20 @@ For Python: https://github.com/mapado/haversine
 For Ruby: https://github.com/kristianmandrup/haversine
 
 ## Solution:
+
+Completed! To test the app: 
+
+1. Create a virtual environment.
+2. Install the dependencies.
+3. Run the database container.
+4. Run the program `bonus.py` and follow the instructions: 
+
+```
+python -m venv venv
+pip install -r requirements.txt
+docker-compose up -d
+python bonus.py
+# follow the instructions
+```
+
+Note: If something is not working, check the python version. I'd expect it to work with any Python version `>=3.6`, but has only been tested on `Python 3.10` so prefer this version whenever is possible.
