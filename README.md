@@ -9,7 +9,7 @@ And
 > No need to derive any fancy match for distances (...)
 
 ```
-Several good practices are ignored for the sake of simplicity.
+Some practices like avoing hardcoding credentials or adding unit tests are ignored for the sake of simplicity.
 ```
 
 # The Problem:
@@ -24,7 +24,11 @@ Stand up your favorite kind of database (and ideally it would be in a form that 
 
 ## Solution:
 
-I have completed the task using Postgres, to run it you can use `docker-compose` (as requested): `docker-compose up -d`
+I have completed the task using Postgres, to run it you can use `docker-compose` (as requested)
+
+```
+docker-compose up -d
+```
 
 # The Task (Part 2):
 
@@ -79,16 +83,18 @@ For Ruby: https://github.com/kristianmandrup/haversine
 Completed! To test the app: 
 
 1. Create a virtual environment.
-2. Install the dependencies.
-3. Run the database container.
-4. Run the program `bonus.py` and follow the instructions: 
+2. Active the virtual environment.
+3. Install the dependencies.
+4. Run the database container.
+5. Run the program `bonus.py` and follow the instructions: 
 
 ```
 python -m venv venv
+source venv/bin/activate # for linux
 pip install -r requirements.txt
 docker-compose up -d
 python bonus.py
 # follow the instructions
 ```
 
-Note: If something is not working, check the python version. I'd expect it to work with any Python version `>=3.6`, but has only been tested on `Python 3.10` so prefer this version whenever is possible.
+Note: If something is not working, check the OS and Python version. I'd expect it to work on Windows, Linux and Mac with any Python version `>=3.6`, but has only been tested on `Ubuntu` `Python 3.10` so prefer this version whenever is possible on .
