@@ -1,7 +1,5 @@
 import csv
 import json
-import time
-import datetime
 
 
 data = json.load(open('starlink_historical_data.json'))
