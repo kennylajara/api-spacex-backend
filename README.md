@@ -64,12 +64,14 @@ Write a query to fetch the last known position of a satellite (by id), given a t
 ```sql
 SELECT longitude, latitude
 FROM starlink_historical_data
-WHERE id='60106f20e900d60006e32cc4'
+WHERE id='<SatelliteID>' and creation_date<='<Time>'
 ORDER BY creation_date
 DESC LIMIT 1;
 ```
 
-Replace `60106f20e900d60006e32cc4` for the ID of the desired satellite.
+* Replace `<SatelliteID>` for the given satellite ID. Example: `60106f20e900d60006e32cc4`.
+* Replace `<Time>` for the given time. Example: `2021-01-26 13:26:11`.
+
 
 # Bonus Task (Part 4):
 
